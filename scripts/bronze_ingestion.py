@@ -12,7 +12,7 @@ def create_spark_session():
 def ingest_bronze():
     spark = create_spark_session()
     
-    # Caminhos (ajuste conforme sua pasta local)
+    # Caminhos
     raw_path = "./data/raw"
     bronze_path = "./data/bronze"
     
@@ -25,7 +25,7 @@ def ingest_bronze():
     df_zones.write.mode("overwrite").parquet(f"{bronze_path}/taxi_zones")
     print("- Taxi Zones: OK")
 
-    # 2. Ingestão do Yellow Taxi Trip Data (Parquet)
+    # 2. Ingestão do Yellow Taxi Trip Data
     # Lemos os arquivos originais
     df_trips = spark.read.parquet(f"{raw_path}/yellow_tripdata_2024-01.parquet")
     

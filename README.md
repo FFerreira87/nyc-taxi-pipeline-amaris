@@ -41,6 +41,7 @@ Plaintext
 ├── architecture/
 │   └── diagram.png             # Desenho da arquitetura
 └── README.md
+
 🚀 Como Executar
 1. Infraestrutura (Terraform)
 Para provisionar o ambiente na GCP:
@@ -51,6 +52,7 @@ cd terraform
 terraform init
 terraform plan
 terraform apply
+
 2. Pipeline de Dados (Local)
 Certifique-se de ter o pyspark instalado e o JAVA_HOME configurado.
 
