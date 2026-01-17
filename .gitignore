@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Spark/Hadoop
+derby.log
+metastore_db/
+spark-warehouse/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Local Data (Não subir os arquivos Parquet/CSV gigantes)
+data/raw/*
+data/bronze/*
+data/silver/*
+data/gold/*
+!data/.gitkeep
